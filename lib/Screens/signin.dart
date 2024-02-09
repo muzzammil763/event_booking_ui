@@ -1,3 +1,4 @@
+import 'package:event_planner_ui/Config/switch.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -144,6 +145,88 @@ class _SigninScreenState extends State<SigninScreen> {
               ),
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SwitchButton(),
+                const Text(
+                  "Remember me",
+                  style: TextStyle(
+                    fontSize: 13,
+                  ),
+                ),
+                const Spacer(),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Forgot password?',
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 32,
+              ),
+              child: Container(
+                height: 70,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: const Color(0XFF5669FF),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                      ),
+                    ),
+                    const Spacer(),
+                    const Text(
+                      "SIGN IN",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Spacer(),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0XFF3D56F0),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
