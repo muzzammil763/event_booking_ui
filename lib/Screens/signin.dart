@@ -14,6 +14,7 @@ class _SigninScreenState extends State<SigninScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFF3F4F6),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 24,
@@ -84,7 +85,7 @@ class _SigninScreenState extends State<SigninScreen> {
                   fontSize: 13,
                 ),
                 filled: true,
-                fillColor: const Color(0XFFF3F4F6),
+                fillColor: Colors.white,
               ),
               textInputAction: TextInputAction.next,
             ),
@@ -141,13 +142,13 @@ class _SigninScreenState extends State<SigninScreen> {
                   ),
                 ),
                 filled: true,
-                fillColor: const Color(0XFFF3F4F6),
+                fillColor: Colors.white,
               ),
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,
             ),
             const SizedBox(
-              height: 24,
+              height: 16,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -162,71 +163,179 @@ class _SigninScreenState extends State<SigninScreen> {
                 const Spacer(),
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     'Forgot password?',
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent[700],
                     ),
                   ),
                 ),
               ],
             ),
             const SizedBox(
-              height: 40,
+              height: 32,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 32,
+                horizontal: 64,
               ),
               child: Container(
-                height: 70,
+                height: 60,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: const Color(0XFF5669FF),
-                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blueAccent[700],
+                  borderRadius: BorderRadius.circular(32),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       width: 16,
                     ),
-                    Container(
-                      height: 30,
-                      width: 30,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.transparent,
-                      ),
+                    //icon for space settlment
+                    Icon(
+                      Icons.arrow_forward,
+                      color: Colors.transparent,
                     ),
-                    const Spacer(),
-                    const Text(
+                    //icon for space settlment
+                    Spacer(),
+                    Text(
                       "SIGN IN",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Spacer(),
-                    Container(
-                      height: 30,
-                      width: 30,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0XFF3D56F0),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
-                      ),
+                    Spacer(),
+                    Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 16,
                     ),
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Text(
+              "OR",
+              style: TextStyle(
+                color: Colors.black38,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+              ),
+              child: Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.asset(
+                        "assets/images/logo.png",
+                        height: 35,
+                        width: 35,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    const Text(
+                      "Login with Google",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+              ),
+              child: Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.asset(
+                        "assets/images/logo.png",
+                        height: 35,
+                        width: 35,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    const Text(
+                      "Login with Facebook",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Don't have an account?",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black38,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.blueAccent[700],
+                    ),
+                  ),
+                )
+              ],
             ),
           ],
         ),
