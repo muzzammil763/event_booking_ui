@@ -35,7 +35,7 @@ class SwitchClass extends State {
               onChanged: toggleSwitch,
               value: isSwitched,
               activeColor: Colors.white,
-              activeTrackColor: const Color(0XFF3D56F0),
+              activeTrackColor: Colors.blueAccent[700],
               inactiveThumbColor: Colors.black38,
               inactiveTrackColor: const Color(0XFFF3F4F6),
             ),
