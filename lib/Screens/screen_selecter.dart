@@ -1,4 +1,5 @@
 import 'package:event_planner_ui/Screens/signin.dart';
+import 'package:event_planner_ui/Screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -59,7 +60,7 @@ class ScreenSelecter extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SigninScreen(),
+                      builder: (context) => const SignupScreen(),
                     ),
                   );
                 },
