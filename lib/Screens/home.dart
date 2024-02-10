@@ -10,6 +10,146 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           topcontainer(),
+          const SizedBox(height: 8),
+          categoryscrollview(),
+        ],
+      ),
+    );
+  }
+
+  SingleChildScrollView categoryscrollview() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 24,
+      ),
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          Container(
+            height: 45,
+            width: 110,
+            decoration: BoxDecoration(
+              color: const Color(0XFFF0635A),
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.sports_volleyball,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  "Sports",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+          Container(
+            height: 45,
+            width: 110,
+            decoration: BoxDecoration(
+              color: const Color(0xffff59762),
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  CupertinoIcons.music_note_2,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  "Music",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+          Container(
+            height: 45,
+            width: 110,
+            decoration: BoxDecoration(
+              color: Colors.cyan,
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.emoji_food_beverage_rounded,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  "Food",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+          Container(
+            height: 45,
+            width: 110,
+            decoration: BoxDecoration(
+              color: Colors.blueAccent,
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.draw,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  "Art",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
