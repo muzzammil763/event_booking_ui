@@ -1,3 +1,4 @@
+import 'package:event_planner_ui/Screens/home.dart';
 import 'package:event_planner_ui/Screens/reset_password.dart';
 import 'package:event_planner_ui/Screens/signin.dart';
 import 'package:event_planner_ui/Screens/signup.dart';
@@ -167,6 +168,36 @@ class ScreenSelecter extends StatelessWidget {
                   child: const Center(
                     child: Text(
                       "Reset password",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent[700],
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Home",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
