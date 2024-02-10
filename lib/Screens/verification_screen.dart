@@ -1,15 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class VerificationScreen extends StatefulWidget {
+class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
 
-  @override
-  State<VerificationScreen> createState() => _VerificationScreenState();
-}
-
-class _VerificationScreenState extends State<VerificationScreen> {
-  bool passwordVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
