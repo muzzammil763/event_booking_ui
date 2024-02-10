@@ -10,8 +10,46 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           topcontainer(),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
           categoryscrollview(),
+          const SizedBox(height: 24),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  "Upcoming Events",
+                  style: TextStyle(
+                    fontSize: 20,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Spacer(),
+                Container(
+                  height: 30,
+                  width: 80,
+                  child: const Row(
+                    children: [
+                      Text(
+                        "See All",
+                        style: TextStyle(
+                          color: Colors.black45,
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_right,
+                        color: Colors.black45,
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
