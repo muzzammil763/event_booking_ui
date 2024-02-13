@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -389,7 +390,7 @@ class HomeScreen extends StatelessWidget {
                   height: 130,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color(0XFF00F8FF).withOpacity(0.2),
+                    color: const Color(0XFF00F8FF).withOpacity(0.1),
                     borderRadius: BorderRadius.circular(16),
                   ),
                 ),
@@ -445,6 +446,21 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                       ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  right: 48,
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 8,
+                    ),
+                    height: 120,
+                    width: 120,
+                    //color: Colors.red,
+                    child: SvgPicture.asset(
+                      "assets/images/invite.svg",
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
