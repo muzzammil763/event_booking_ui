@@ -465,6 +465,37 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                children: [
+                  Text(
+                    "Nearby You",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Spacer(),
+                  Text(
+                    "See All",
+                    style: TextStyle(
+                      color: Colors.black38,
+                      fontSize: 14,
+                      letterSpacing: 0,
+                      wordSpacing: -1,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_right,
+                    color: Colors.black38,
+                  ),
+                ],
+              ),
             )
           ],
         ),
