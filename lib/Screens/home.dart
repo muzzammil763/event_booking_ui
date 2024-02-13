@@ -379,6 +379,77 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 48,
+            ),
+            Stack(
+              children: [
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
+                  height: 130,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: const Color(0XFF00F8FF).withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                Positioned(
+                  top: 16,
+                  left: 48,
+                  child: SizedBox(
+                    height: 100,
+                    width: 200,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Spacer(),
+                        const Text(
+                          "Invite your friends",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text(
+                          "Get \$20 for ticket",
+                          style: TextStyle(
+                            color: Colors.black45,
+                            letterSpacing: 0,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Container(
+                          height: 35,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: const Color(0XFF00F8FF),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "INVITE",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
