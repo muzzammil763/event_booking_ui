@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,40 +14,406 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(height: 16),
           categoryscrollview(),
           const SizedBox(height: 24),
-          Padding(
+          buildrow(),
+          const SizedBox(
+            height: 24,
+          ),
+          SingleChildScrollView(
             padding: const EdgeInsets.symmetric(
               horizontal: 24,
             ),
+            scrollDirection: Axis.horizontal,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
-                  "Upcoming Events",
-                  style: TextStyle(
-                    fontSize: 20,
-                    letterSpacing: 0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Spacer(),
                 Container(
-                  height: 30,
-                  width: 80,
-                  child: const Row(
+                  height: 280,
+                  width: 240,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
                     children: [
-                      Text(
-                        "See All",
-                        style: TextStyle(
-                          color: Colors.black45,
-                        ),
+                      Stack(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(
+                              left: 12,
+                              right: 12,
+                              top: 12,
+                            ),
+                            height: 155,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              color: Colors.amberAccent,
+                            ),
+                          ),
+                          Positioned(
+                            top: 22,
+                            left: 22,
+                            child: Container(
+                              height: 55,
+                              width: 55,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "10",
+                                    style: GoogleFonts.lexend(
+                                      color: const Color(0XFFF0635A),
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                  Text(
+                                    "JUNE",
+                                    style: GoogleFonts.lexend(
+                                      color: const Color(0XFFF0635A),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 22,
+                            right: 22,
+                            child: Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Center(
+                                child: Icon(
+                                  CupertinoIcons.bookmark_fill,
+                                  size: 18,
+                                  color: Color(0XFFF0635A),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      Icon(
-                        Icons.arrow_right,
-                        color: Colors.black45,
+                      SizedBox(
+                        height: 105,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Spacer(),
+                              const Text(
+                                "International Band Concert",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const Spacer(),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Stack(
+                                    children: [
+                                      const SizedBox(
+                                        height: 24,
+                                        width: 70,
+                                      ),
+                                      Positioned(
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                            "assets/images/facebook.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 28,
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                            "assets/images/facebook.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 8,
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                              "assets/images/facebook.png"),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Text(
+                                    "+20 Going",
+                                    style: GoogleFonts.lexend(
+                                      color: Colors.blueAccent[700],
+                                      letterSpacing: 0,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                              const Row(
+                                children: [
+                                  Icon(
+                                    CupertinoIcons.location_fill,
+                                    color: Colors.black38,
+                                    size: 13,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    "36 Guild Street London, UK",
+                                    style: TextStyle(
+                                      color: Colors.black38,
+                                      fontSize: 12,
+                                      wordSpacing: -1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                Container(
+                  height: 280,
+                  width: 240,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    children: [
+                      Stack(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(
+                              left: 12,
+                              right: 12,
+                              top: 12,
+                            ),
+                            height: 155,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              color: Colors.amberAccent,
+                            ),
+                          ),
+                          Positioned(
+                            top: 22,
+                            left: 22,
+                            child: Container(
+                              height: 55,
+                              width: 55,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "10",
+                                    style: GoogleFonts.lexend(
+                                      color: const Color(0XFFF0635A),
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                  Text(
+                                    "JUNE",
+                                    style: GoogleFonts.lexend(
+                                      color: const Color(0XFFF0635A),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 22,
+                            right: 22,
+                            child: Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Center(
+                                child: Icon(
+                                  CupertinoIcons.bookmark_fill,
+                                  size: 18,
+                                  color: Color(0XFFF0635A),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 105,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Spacer(),
+                              const Text(
+                                "International Band Concert",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const Spacer(),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Stack(
+                                    children: [
+                                      const SizedBox(
+                                        height: 24,
+                                        width: 70,
+                                      ),
+                                      Positioned(
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                            "assets/images/facebook.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 28,
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                            "assets/images/facebook.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 8,
+                                        child: CircleAvatar(
+                                          radius: 12,
+                                          child: Image.asset(
+                                              "assets/images/facebook.png"),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Text(
+                                    "+20 Going",
+                                    style: GoogleFonts.lexend(
+                                      color: Colors.blueAccent[700],
+                                      letterSpacing: 0,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                              const Row(
+                                children: [
+                                  Icon(
+                                    CupertinoIcons.location_fill,
+                                    color: Colors.black38,
+                                    size: 13,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    "36 Guild Street London, UK",
+                                    style: TextStyle(
+                                      color: Colors.black38,
+                                      fontSize: 12,
+                                      wordSpacing: -1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildrow() {
+    return const Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 24,
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            "Upcoming Events",
+            style: TextStyle(
+              fontSize: 20,
+              letterSpacing: 0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Spacer(),
+          SizedBox(
+            height: 30,
+            width: 80,
+            child: Row(
+              children: [
+                Text(
+                  "See All",
+                  style: TextStyle(
+                    color: Colors.black45,
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_right,
+                  color: Colors.black45,
+                ),
               ],
             ),
           )
@@ -99,7 +466,7 @@ class HomeScreen extends StatelessWidget {
             height: 45,
             width: 110,
             decoration: BoxDecoration(
-              color: const Color(0xffff59762),
+              color: Colors.amber.shade700,
               borderRadius: BorderRadius.circular(24),
             ),
             child: const Row(
