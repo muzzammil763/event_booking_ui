@@ -11,12 +11,12 @@ class EventDetailsScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 200,
+            height: 110,
             decoration: BoxDecoration(
               color: Colors.blueAccent[700],
               borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(48),
-                bottomRight: Radius.circular(48),
+                bottomLeft: Radius.circular(24),
+                bottomRight: Radius.circular(24),
               ),
             ),
             child: Align(
@@ -50,11 +50,16 @@ class EventDetailsScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         Container(
-                          height: 36,
-                          width: 36,
+                          height: 40,
+                          width: 40,
                           decoration: BoxDecoration(
-                            color: Colors.white30,
-                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.white12,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(8),
+                              bottomLeft: Radius.circular(8),
+                              bottomRight: Radius.circular(16),
+                              topRight: Radius.circular(8),
+                            ),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.1),
@@ -70,7 +75,7 @@ class EventDetailsScreen extends StatelessWidget {
                               icon: const Icon(
                                 CupertinoIcons.bookmark_solid,
                                 color: Colors.white,
-                                size: 18,
+                                size: 20,
                               ),
                             ),
                           ),
@@ -83,14 +88,14 @@ class EventDetailsScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 8,
+            height: 16,
           ),
           Container(
             height: 60,
             width: 300,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.circular(32),
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(16),
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -201,7 +206,7 @@ class EventDetailsScreen extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                    color: Colors.grey[300],
+                    color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Center(
@@ -261,7 +266,7 @@ class EventDetailsScreen extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                    color: Colors.grey[300],
+                    color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Center(
@@ -300,6 +305,79 @@ class EventDetailsScreen extends StatelessWidget {
                     ),
                   ],
                 )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 32,
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(
+              horizontal: 24,
+            ),
+            height: 60,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.amberAccent,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Ashfak Sayem",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Organizer",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black45,
+                        letterSpacing: 0,
+                        wordSpacing: -2,
+                      ),
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                Container(
+                  height: 30,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "FOLLOW",
+                      style: TextStyle(
+                        color: Colors.blueAccent[700],
+                        fontSize: 10,
+                        letterSpacing: 0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
