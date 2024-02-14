@@ -1,4 +1,5 @@
 import 'package:event_planner_ui/Screens/eventdetails.dart';
+import 'package:event_planner_ui/Screens/events.dart';
 import 'package:event_planner_ui/Screens/home.dart';
 import 'package:event_planner_ui/Screens/reset_password.dart';
 import 'package:event_planner_ui/Screens/search.dart';
@@ -260,6 +261,36 @@ class ScreenSelecter extends StatelessWidget {
                   child: const Center(
                     child: Text(
                       "Search Screen",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EventsScreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent[700],
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Events Screen",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
