@@ -100,7 +100,7 @@ class EventsScreen extends StatelessWidget {
                   SizedBox(
                     height: 200,
                     child: SvgPicture.asset(
-                      "assets/images/events.svg",
+                      "assets/images/event.svg",
                       fit: BoxFit.fitHeight,
                     ),
                   ),
